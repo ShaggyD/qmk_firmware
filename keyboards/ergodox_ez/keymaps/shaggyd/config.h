@@ -6,8 +6,9 @@
 // #undef LEADER_TIMEOUT
 // #define LEADER_TIMEOUT 1000
 
-// #undef TAPPING_TERM
-#define TAPPING_TERM 200
+#undef TAPPING_TERM
+#define TAPPING_TERM 160
+
 
 // #undef TAPPING_TOGGLE
 // #define TAPPING_TOGGLE 2
@@ -20,3 +21,7 @@
 #define MODS_CTRL_MASK  (MOD_BIT(KC_LCTL)|MOD_BIT(KC_RCTRL))
 #define MODS_ALT_MASK  (MOD_BIT(KC_LALT)|MOD_BIT(KC_RALT))
 #define MODS_GUI_MASK  (MOD_BIT(KC_LGUI)|MOD_BIT(KC_RGUI))
+
+
+//define mouse key stuff
+// #define MOUSEKEY_WHEEL_TIME_TO_MAX 900

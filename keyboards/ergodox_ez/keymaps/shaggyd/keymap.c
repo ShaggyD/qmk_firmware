@@ -76,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                CTL_T(KC_GRAVE),KC_LCTL,KC_LALT,GUI_T(KC_NO),KC_TRANSPARENT,KC_PGUP,
 
                // Left Thumb Cluster
-                                KC_TRANSPARENT,  KC_TRANSPARENT,
-                                                 KC_TRANSPARENT,
-               GUI_T(KC_SPACE), CTL_T(KC_TAB),   KC_LBRACKET,
+                         KC_TRANSPARENT,  KC_TRANSPARENT,
+                                          KC_TRANSPARENT,
+               KC_SPACE, CTL_T(KC_TAB),   KC_LBRACKET,
 
                // ================= Right Hand  =================
                // Right Alphas

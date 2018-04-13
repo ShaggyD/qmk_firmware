@@ -6,8 +6,8 @@
 // #undef LEADER_TIMEOUT
 // #define LEADER_TIMEOUT 1000
 
-#undef TAPPING_TERM
-#define TAPPING_TERM 160
+// #undef TAPPING_TERM
+// #define TAPPING_TERM 160
 
 
 // #undef TAPPING_TOGGLE

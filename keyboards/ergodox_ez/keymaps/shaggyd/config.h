@@ -8,12 +8,15 @@
 
 // #undef TAPPING_TERM
 // #define TAPPING_TERM 160
+// #define RETRO_TAPPING
+// #define IGNORE_MOD_TAP_INTERRUPT
 
 
 // #undef TAPPING_TOGGLE
 // #define TAPPING_TOGGLE 2
 
 // #endif
+//  #define PERMISSIVE_HOLD
 
 
 //define modifiers

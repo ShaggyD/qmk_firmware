@@ -77,12 +77,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_LSHIFT,   KC_Z,KC_X,KC_C,KC_V,KC_B,                 KC_GRAVE,
 
                // Left bottom row
-               LCTL(LSFT(KC_SPACE)),KC_LALT,GUI_T(KC_NO),TT(1),LT(8,KC_PGUP),
+               LCTL(LSFT(KC_SPACE)),KC_LALT,GUI_T(KC_NO),KC_MINUS,LT(8,KC_PGUP),
 
                // Left Thumb Cluster
                          KC_TRANSPARENT,  KC_TRANSPARENT,
                                           KC_TRANSPARENT,
-               KC_SPACE, KC_LBRACKET,           TD(TD_ALL_WINDOWS),
+               KC_SPACE, KC_LBRACKET,     KC_MINUS,
 
                // ================= Right Hand  =================
                // Right Alphas
@@ -92,12 +92,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                CTL_T(KC_QUOTE),    KC_N,KC_M,TD(TD_CC_TERMINAL),KC_DOT,KC_SLASH,   KC_RSHIFT,
 
                // Right bottom row
-               GUI_T(KC_PGDOWN),KC_TRANSPARENT,KC_MINUS,KC_EQUAL,LCTL(LSFT(KC_SPACE)),
+               GUI_T(KC_PGDOWN),KC_EQUAL,TD(TD_ALL_WINDOWS),TD(TD_ALL_APPLICATIONS),LCTL(LSFT(KC_SPACE)),
 
                // Right Thumb Cluster
                KC_TRANSPARENT,              KC_TRANSPARENT,
                KC_TRANSPARENT,
-               TD(TD_ALL_APPLICATIONS),     KC_RBRACKET,    LT(6, KC_ENTER)
+               KC_EQUAL,     KC_RBRACKET,    LT(6, KC_ENTER)
   ),
 
   // Development Layer
@@ -109,16 +109,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                // Left Alphas
                KC_TRANSPARENT,             KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,        KC_TRANSPARENT,
-               KC_TRANSPARENT,             KC_A,          ALT_T(KC_S),   CTL_T(KC_D),   KC_TRANSPARENT,KC_TRANSPARENT,
-               MT(MOD_LSFT, KC_LBRACKET),  KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,        KC_TRANSPARENT,
+               KC_TRANSPARENT,             KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+               KC_TRANSPARENT,             KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,        KC_TRANSPARENT,
 
                // Left bottom row
                KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
 
                // Left Thumb Cluster
-                                KC_TRANSPARENT,   KC_TRANSPARENT,
-                                                  KC_TRANSPARENT,
-               GUI_T(KC_SPACE), KC_TRANSPARENT,   KC_TRANSPARENT,
+                               KC_TRANSPARENT,   KC_TRANSPARENT,
+                                                 KC_TRANSPARENT,
+               KC_TRANSPARENT, KC_TRANSPARENT,   KC_TRANSPARENT,
 
                // ================= Right Hand  =================
                // Right Alphas

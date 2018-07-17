@@ -49,7 +49,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_HH_WINDOW]        = ACTION_TAP_DANCE_DOUBLE(KC_H, LGUI(KC_TAB)),
   [TD_SEMI_TAB]         = ACTION_TAP_DANCE_DOUBLE(KC_SCOLON, LGUI(KC_GRAVE)),
   [TD_SEMI_QUOTE]       = ACTION_TAP_DANCE_DOUBLE(KC_QUOTE, KC_SCOLON),
-  [TD_DOT_MENU]         = ACTION_TAP_DANCE_DOUBLE(KC_DOT, LCTL(LSFT(KC_SPACE))),
+  [TD_DOT_MENU]         = ACTION_TAP_DANCE_DOUBLE(KC_COMMA, LCTL(LSFT(KC_SPACE))),
   [TD_CC_TERMINAL]      = ACTION_TAP_DANCE_DOUBLE(KC_COMMA, LGUI(KC_ESCAPE)),
   [TD_CTL_CODE]         = ACTION_TAP_DANCE_DOUBLE(KC_TAB, TT(1)),
   [TD_ALL_WINDOWS]      = ACTION_TAP_DANCE_DOUBLE(LCTL(KC_UP), LCTL(KC_UP)),
@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                // Left Alphas
                KC_TAB,               KC_Q,KC_W,KC_E,KC_R,KC_T,        KC_TRANSPARENT,
                TD(TD_ESCAPE_CAPS),   KC_A,KC_S,KC_D,GUI_T(KC_F),KC_G,
-               KC_RSHIFT,   KC_Z,KC_X,KC_C,KC_V,KC_B,                 KC_GRAVE,
+               KC_LSHIFT,   KC_Z,KC_X,KC_C,KC_V,KC_B,                 KC_GRAVE,
 
                // Left bottom row
                KC_LCTL,KC_LALT,GUI_T(KC_NO),TT(1),LT(8,KC_PGUP),
@@ -201,7 +201,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                KC_TRANSPARENT,    LSFT(KC_6),LSFT(KC_7),LSFT(KC_8),LSFT(KC_9),LSFT(KC_0),                     KC_MINUS,
                KC_AUDIO_VOL_UP,   KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT, KC_TRANSPARENT,
                KC_LEFT,KC_DOWN,   KC_UP,KC_RIGHT,KC_MS_WH_DOWN,KC_MS_WH_RIGHT,
-               KC_AUDIO_VOL_DOWN, KC_TRANSPARENT,KC_TRANSPARENT,KC_LBRACKET,KC_RBRACKET,KC_TRANSPARENT,       KC_TRANSPARENT,
+               KC_AUDIO_VOL_DOWN, KC_TRANSPARENT,TD(TD_DOT_MENU),KC_LBRACKET,KC_RBRACKET,KC_TRANSPARENT,       KC_TRANSPARENT,
 
                // Right Bottom Row
                KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
@@ -384,24 +384,24 @@ uint32_t layer_state_set_user(uint32_t state) {
   // Handle RGB strip colors
   uint8_t layer = biton32(state);
 
-  switch (layer) {
-    case 0:
-      /* turn to green */
-      rgblight_mode(1);
-      rgblight_setrgb(128,0,128);
-      break;
-    case 1:
-      /* turn to green */
-      rgblight_mode(1);
-      rgblight_setrgb(0,255,0);
-      break;
-    case 6:
-      rgblight_mode(1);
-      rgblight_setrgb(0, 0, 255);
-      break;
-    default:
-      break;
-  }
+  // switch (layer) {
+  //   case 0:
+  //     /* turn to green */
+  //     rgblight_mode(1);
+  //     rgblight_setrgb(128,0,128);
+  //     break;
+  //   case 1:
+  //     /* turn to green */
+  //     rgblight_mode(1);
+  //     rgblight_setrgb(0,255,0);
+  //     break;
+  //   case 6:
+  //     rgblight_mode(1);
+  //     rgblight_setrgb(0, 0, 255);
+  //     break;
+  //   default:
+  //     break;
+  // }
   return state;
 
 };
